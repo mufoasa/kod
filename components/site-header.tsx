@@ -27,9 +27,9 @@ export function SiteHeader() {
           <span className="font-serif text-2xl font-bold tracking-wide text-primary">
             KOD
           </span>
-          <span className="hidden text-xs uppercase tracking-[0.3em] text-muted-foreground sm:block">
-            Steak Bar
-          </span>
+          <span className="text-xs uppercase tracking-[0.3em] text-muted-foreground truncate">
+  Steak Bar
+</span>
         </Link>
 
         {/* Desktop nav */}
