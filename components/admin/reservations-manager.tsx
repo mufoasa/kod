@@ -83,7 +83,7 @@ export function ReservationsManager({
   return (
     <div>
       {/* Filter tabs */}
-      <div className="mb-6 flex gap-2">
+      <div className="mb-6 flex flex-wrap gap-2">
         {(["all", "pending", "confirmed", "cancelled"] as const).map((f) => (
           <button
             key={f}
@@ -112,6 +112,7 @@ export function ReservationsManager({
               className="border border-border bg-card p-5 transition-colors hover:border-border/80"
             >
               <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
+                {/* Info Section */}
                 <div className="flex-1">
                   <div className="flex flex-wrap items-center gap-3">
                     <h3 className="font-serif text-lg font-semibold text-foreground">
@@ -124,7 +125,7 @@ export function ReservationsManager({
                     </span>
                   </div>
 
-                  <div className="mt-3 flex flex-wrap gap-4 text-xs text-muted-foreground">
+                  <div className="mt-3 grid gap-2 text-xs text-muted-foreground sm:grid-cols-2 lg:flex lg:flex-wrap lg:gap-4">
                     <span className="flex items-center gap-1.5">
                       <Clock className="h-3 w-3" />
                       {r.reservation_date} at {r.reservation_time}
@@ -150,14 +151,15 @@ export function ReservationsManager({
                   )}
                 </div>
 
-                <div className="flex items-center gap-2">
+                {/* Action Buttons */}
+                <div className="flex flex-col gap-2 sm:flex-row sm:flex-wrap sm:items-center">
                   {r.status === "pending" && (
                     <>
                       <Button
                         size="sm"
                         variant="outline"
                         onClick={() => updateStatus(r.id, "confirmed")}
-                        className="border-emerald-400/30 text-emerald-400 hover:bg-emerald-400/10 hover:text-emerald-400"
+                        className="w-full sm:w-auto border-emerald-400/30 text-emerald-400 hover:bg-emerald-400/10 hover:text-emerald-400"
                       >
                         <Check className="mr-1 h-3 w-3" />
                         Confirm
@@ -166,7 +168,7 @@ export function ReservationsManager({
                         size="sm"
                         variant="outline"
                         onClick={() => updateStatus(r.id, "cancelled")}
-                        className="border-red-400/30 text-red-400 hover:bg-red-400/10 hover:text-red-400"
+                        className="w-full sm:w-auto border-red-400/30 text-red-400 hover:bg-red-400/10 hover:text-red-400"
                       >
                         <X className="mr-1 h-3 w-3" />
                         Cancel
@@ -178,7 +180,7 @@ export function ReservationsManager({
                       size="sm"
                       variant="outline"
                       onClick={() => updateStatus(r.id, "cancelled")}
-                      className="border-red-400/30 text-red-400 hover:bg-red-400/10 hover:text-red-400"
+                      className="w-full sm:w-auto border-red-400/30 text-red-400 hover:bg-red-400/10 hover:text-red-400"
                     >
                       <X className="mr-1 h-3 w-3" />
                       Cancel
@@ -189,7 +191,7 @@ export function ReservationsManager({
                       size="sm"
                       variant="outline"
                       onClick={() => updateStatus(r.id, "pending")}
-                      className="border-amber-400/30 text-amber-400 hover:bg-amber-400/10 hover:text-amber-400"
+                      className="w-full sm:w-auto border-amber-400/30 text-amber-400 hover:bg-amber-400/10 hover:text-amber-400"
                     >
                       Reopen
                     </Button>
@@ -198,7 +200,7 @@ export function ReservationsManager({
                     size="sm"
                     variant="outline"
                     onClick={() => deleteReservation(r.id)}
-                    className="border-border text-muted-foreground hover:border-destructive/30 hover:text-destructive"
+                    className="w-full sm:w-auto border-border text-muted-foreground hover:border-destructive/30 hover:text-destructive"
                   >
                     <Trash2 className="h-3 w-3" />
                   </Button>
