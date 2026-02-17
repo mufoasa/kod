@@ -111,7 +111,7 @@ export function ReservationsManager({
               key={r.id}
               className="border border-border bg-card p-5 transition-colors hover:border-border/80"
             >
-              <div className="flex flex-wrap items-start justify-between gap-4">
+              <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
                 <div className="flex-1">
                   <div className="flex flex-wrap items-center gap-3">
                     <h3 className="font-serif text-lg font-semibold text-foreground">
