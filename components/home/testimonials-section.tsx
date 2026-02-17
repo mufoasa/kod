@@ -2,18 +2,18 @@ import { Star } from "lucide-react"
 
 const testimonials = [
   {
-    name: "Stefan M.",
-    text: "The best steak I have ever had. The Tomahawk was cooked to absolute perfection. A truly world-class experience right here in Tetovo.",
+    name: "Muhamed A.",
+    text: "Absolutely amazing experience at Kod Steak Bar. The burger was juicy, perfectly seasoned, and full of flavor. The atmosphere makes it even better. Highly recommended!",
     rating: 5,
   },
   {
-    name: "Ana K.",
-    text: "From the ambiance to the A5 Wagyu, everything was extraordinary. The Smoked Old Fashioned is a must-try. We will be back every week.",
+    name: "Argjend S.",
+    text: "Best spot in Tetovo for premium burgers and steaks. Everything tasted fresh and high quality. The service was fast and very professional.",
     rating: 5,
   },
   {
-    name: "Marco D.",
-    text: "I have dined at Nusr-Et and CUT. Kod stands proudly among them. Incredible quality, impeccable service, stunning atmosphere.",
+    name: "Lavdrim B.",
+    text: "Kod never disappoints. From the presentation to the taste, everything feels top tier. Definitely my go-to place for a great meal with friends.",
     rating: 5,
   },
 ]
